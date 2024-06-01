@@ -65,7 +65,7 @@ export class TaskEntity {
     example: Constants.API_PROPERTY_USER_UUID_EXAMPLE,
     description: Constants.API_PROPERTY_TASK_ENTITY_USER_ID_AT_DESCRIPTION,
   })
-  @Column()
+  @Column({ type: 'uuid' })
   userId: string;
 
   @ManyToOne(() => UserEntity, (user) => user.tasks)
