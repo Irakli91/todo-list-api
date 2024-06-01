@@ -1,4 +1,4 @@
-import { IsString, MaxLength } from 'class-validator';
+import { IsOptional, IsString, MaxLength } from 'class-validator';
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import Constants from 'src/shared/constants/constants';
 
@@ -9,6 +9,7 @@ export class UpdateTaskDto {
   })
   @IsString()
   @MaxLength(100)
+  @IsOptional()
   title?: string;
 
   @ApiPropertyOptional({
@@ -17,5 +18,6 @@ export class UpdateTaskDto {
   })
   @IsString()
   @MaxLength(500)
+  @IsOptional()
   description?: string;
 }
