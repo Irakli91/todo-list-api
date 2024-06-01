@@ -33,9 +33,9 @@ Before you begin, ensure you have the following installed on your machine:
 ### Installation
 
 1. **Clone the repository**:
-   git clone https://github.com/Irakli91/todo-list.git
+   git clone https://github.com/Irakli91/todo-list-api.git
 2. **Navigate to the project directory**:
-   cd todo-list
+   cd todo-list-api
 3. **Install dependencies**:
    npm install
 
