@@ -10,11 +10,11 @@ import Constants from 'src/shared/constants/constants';
 @Module({
   imports: [
     JwtModule.registerAsync({
+      inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
         secret: configService.get<string>('JWT_SECRET'),
         signOptions: { expiresIn: Constants.JWT_TOKEN_EXPIRES_TIME },
       }),
-      inject: [ConfigService],
     }),
   ],
   providers: [UserService, AuthService, UserRepository],

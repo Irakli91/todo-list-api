@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
+import Constants from './shared/constants/constants';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -14,9 +15,9 @@ async function bootstrap() {
   const port = configService.get<number>('PORT') || 3000;
 
   const config = new DocumentBuilder()
-    .setTitle('Todo List')
-    .setDescription('The Todo List API')
-    .setVersion('1.0')
+    .setTitle(Constants.PROJECT_NAME)
+    .setDescription(Constants.PROJECT_DESCRIPTION)
+    .setVersion(Constants.API_VERSION)
     .addBearerAuth()
     .build();
 

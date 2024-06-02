@@ -74,7 +74,7 @@ export default class Constants {
   public static API_PROPERTY_CREATE_USER_PASSWORD_DESCRIPTION =
     'The password of the user.';
   public static API_PROPERTY_CREATE_USER_ROLE_EXAMPLE =
-    'Role must be "user" or "admin".';
+    'Role must be user or admin.';
   public static API_PROPERTY_CREATE_USER_ROLE_DESCRIPTION =
     'The role of the user.';
   public static API_OPERATION_CREATE_USER_INFO = 'Create a new user.';
@@ -104,6 +104,9 @@ export default class Constants {
     '2024-05-30T15:21:09.968Z';
   public static API_PROPERTY_USER_ENTITY_UPDATED_AT_DESCRIPTION =
     'The last update date of the user.';
-
   public static JWT_TOKEN_EXPIRES_TIME = '1h';
+  public static PROJECT_NAME = 'Todo List API';
+  public static PROJECT_DESCRIPTION =
+    'This API allows users to manage their tasks. It supports user authentication and authorization with two roles: Admin and User.';
+  public static API_VERSION = '1.0';
 }
